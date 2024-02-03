@@ -30,9 +30,8 @@ By orchestrating these elements, the IoT Mini Project 1 aims to provide an illus
 
 ## Getting Started
 By following these steps you will be able to run or emulate our project.
-### Requirements
 
-# Requirements
+### Requirements
 
 Before diving into the implementation of the IoT Mini Project 1, ensure that the following requirements are met to guarantee a smooth and successful deployment:
 
