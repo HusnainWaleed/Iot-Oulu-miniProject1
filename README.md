@@ -159,6 +159,7 @@ Configure the border router network using the `ethos_uhcpd.py` command. Run the 
 ```bash
 sudo ethos_uhcpd.py m3-1 tap0 2001:660:5307:3100::1/64
 ```
+![Screenshot 2024-02-02 180231](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/f567987c-4aec-4a55-bf22-da08fa841073)
 
 Replace `m3-1` with the appropriate node ID.
 
