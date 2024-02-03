@@ -29,10 +29,38 @@ The IoT Mini Project 1 revolves around the seamless integration of IoT sensors w
 By orchestrating these elements, the IoT Mini Project 1 aims to provide an illustrative example of connecting IoT sensors to an IoT cloud, with a particular focus on AWS. Through this project, users can gain hands-on experience in creating RIOT-based firmware, managing sensor data, and implementing an end-to-end IoT solution.
 
 ## Getting Started
-
+By following these steps you will be able to run or emulate our project.
 ### Requirements
 
-List all the prerequisites or dependencies needed to run your project. Include hardware requirements, software dependencies, and any other external tools or libraries.
+# Requirements
+
+Before diving into the implementation of the IoT Mini Project 1, ensure that the following requirements are met to guarantee a smooth and successful deployment:
+
+1. **Hardware Requirements:**
+   - **IoT Sensors:** Acquire compatible IoT sensors capable of providing the required data for your project. Ensure these sensors are supported by RIOT and have the necessary interfaces for communication.
+   - **Border Router:** Set up a dedicated device to act as a border router, facilitating communication between local IoT devices and the broader network, specifically the AWS IoT cloud.
+
+2. **Software Requirements:**
+   - **RIOT OS:** Install and configure the RIOT operating system on the IoT sensors. Refer to the [RIOT OS documentation](https://riot-os.org/) for installation guidelines and supported hardware platforms.
+   - **Sensor Driver:** Develop or obtain a suitable driver for the IoT sensors, ensuring compatibility with RIOT OS. The driver should enable seamless communication between the firmware and the sensors.
+   - **Border Router Software:** Choose or develop software for the border router, ensuring it is capable of forwarding data from the local IoT network to the AWS IoT cloud.
+
+3. **Cloud Platform:**
+   - **AWS Account:** Create an AWS account or use an existing one to set up the necessary cloud infrastructure. Ensure the account has appropriate permissions to configure and manage AWS IoT services.
+   - **AWS IoT Services:** Familiarize yourself with AWS IoT Core, AWS IoT Device Management, and other relevant services. Configure these services to handle the incoming sensor data securely and efficiently.
+
+4. **Networking:**
+   - **Network Configuration:** Ensure proper network configuration to allow communication between IoT devices, the border router, and the AWS IoT cloud. Configure any necessary firewall settings, ports, and protocols for seamless data flow.
+
+5. **Development Environment:**
+   - **IDE and Toolchain:** Set up an integrated development environment (IDE) and toolchain compatible with RIOT OS for firmware development. Common tools include GCC, CMake, and a text editor of your choice.
+   - **AWS CLI and SDKs:** Install the AWS Command Line Interface (CLI) and any necessary SDKs for your chosen programming language to interact with AWS services programmatically.
+
+6. **Documentation and References:**
+   - **RIOT OS Documentation:** Refer to the official RIOT OS documentation for detailed information on supported platforms, installation procedures, and best practices.
+   - **AWS Documentation:** Explore the AWS IoT documentation to understand the configuration options, security considerations, and best practices for integrating IoT devices with the AWS cloud.
+
+By fulfilling these requirements, you lay the foundation for a successful implementation of the IoT Mini Project 1, ensuring a well-integrated and functional IoT system.
 
 ### Steps to Get Project Running
 
