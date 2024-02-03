@@ -88,15 +88,18 @@ Follow the steps below to set up and run the IoT Mini Project 1 on the IoT testb
 4. **Clone the Repository to IoT Testbed:**
    - Clone your IoT Mini Project 1 repository to the IoT testbed. Use the following command in the Visual Studio Code terminal:
      ```bash
-     git clone https://github.com/your-username/iot-mini-project-1.git
+     git clone https://github.com/HusnainWaleed/Iot-Oulu-miniProject1.git
+
      ```
-     Replace `<your-username>` with your GitHub username.
+ 
 
 5. **Build RIOT OS:**
    - Build the RIOT operating system on the IoT testbed using the following command:
      ```bash
      source /opt/riot.source
      ```
+     ![Screenshot 2024-02-02 163101](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/a85e7947-cbc1-44f2-8d2e-7e3a4dc9bf4e)
+
      This command sets up the RIOT OS environment. Ensure that RIOT OS is correctly configured and built on the IoT testbed.
 
 Now you have successfully set up your IoT Mini Project 1 on the IoT testbed. You are ready to proceed with the next steps, such as configuring the IoT sensors, border router, and AWS IoT integration. Refer to the project documentation for further instructions on configuring and deploying the IoT solution.
@@ -105,7 +108,90 @@ Now you have successfully set up your IoT Mini Project 1 on the IoT testbed. You
 
 ### Using the Code
 
-Explain how users can interact with or customize the code. Provide examples and usage scenarios.
+Follow these steps to effectively use the code in the IoT Mini Project 1, including building the border router firmware for the M3 node, flashing the firmware, configuring the border router network, and setting up the MQTT broker and Mosquitto bridge on the A8 node.
+
+## Building Border Router Firmware for M3 Node
+
+Use the following command to build the border router firmware for the M3 node with a baud rate of 500000:
+
+```bash
+make ETHOS_BAUDRATE=500000 DEFAULT_CHANNEL=<channel> BOARD=iotlab-m3 -C examples/gnrc_border_router clean all
+```
+
+Replace `<channel>` with the desired channel number.
+
+## Flashing the Border Router Firmware
+
+Flash the border router firmware to the first M3 node (m3-1 board in this case) using the `iotlab-node` command. Execute the following command:
+
+```bash
+iotlab-node --flash examples/gnrc_border_router/bin/iotlab-m3/gnrc_border_router.elf -l grenoble,m3,1
+```
+
+Ensure that the correct IoT-LAB site, node type (`m3`), and node ID are specified.
+
+## Configuring the Border Router Network
+
+Configure the border router network using the `ethos_uhcpd.py` command. Run the following command:
+
+```bash
+sudo ethos_uhcpd.py m3-1 tap0 2001:660:5307:3100::1/64
+```
+
+Replace `m3-1` with the appropriate node ID.
+
+## Setting Up MQTT Broker and Mosquitto Bridge on A8 Node
+
+### SSH to IoT Testbed Backend and Login
+
+1. SSH to the IoT testbed backend. Use the following command:
+
+   ```bash
+   ssh <your-username>@saclay.iot-lab.info
+   ```
+
+2. Login to the IoT testbed and navigate to the shared directory:
+
+   ```bash
+   cd ~/shared
+   ```
+
+### SSH into A8 Node
+
+SSH into the A8 node using the following command:
+
+```bash
+ssh root@node-a8-1
+```
+
+### Checking Publicly Accessible IPv6 Address of A8 Node
+
+Check the publicly accessible IPv6 address of the A8 node using the `ifconfig` command:
+
+```bash
+ifconfig
+```
+
+### Starting MQTT Broker on A8 Node
+
+From A8's terminal, start the MQTT broker using the `config.conf` file with the following commands:
+
+```bash
+cd ~/A8
+broker_mqtts config.conf
+```
+
+### Configuring and Starting Mosquitto Bridge on A8 Node
+
+SSH into the A8 node and configure/start the Mosquitto bridge using the following commands:
+
+```bash
+ssh root@node-a8-3
+cd ~/A8
+mosquitto -c mosquitto.conf
+```
+
+Now, you have successfully set up and configured the border router firmware on the M3 node and the MQTT broker with Mosquitto bridge on the A8 node. These components are crucial for the seamless functioning of your IoT Mini Project 1. Refer to the project documentation for additional details and customization options.
 
 ### Deployment
 
