@@ -250,7 +250,8 @@ Follow these steps to deploy the IoT Mini Project 1, including building and flas
    ```bash
    iotlab-node --flash ./bin/iotlab-m3/SensorNode.elf -l grenoble,m3,<id>
    ```
-![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/f804c386-4eb7-4e46-8215-42a472936bcc)
+![Screenshot 2024-02-02 161152](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/587785f8-1bc8-462e-bfa9-736c437f7625)
+
 
    Ensure that the correct IoT-LAB site, node type (`m3`), and node ID are specified.
 
