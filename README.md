@@ -78,6 +78,8 @@ Follow the steps below to set up and run the IoT Mini Project 1 on the IoT testb
      ssh <your-username>@grenoble.iot-lab.info
      ```
 ![Screenshot 2024-02-03 214818](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/09e668e0-924d-41c5-9490-cd0e6d2ae140)
+ And you will see this screen if you are successfull to login to the testbed.
+![Screenshot 2024-02-03 214830](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/46823924-7072-4987-914b-8abdaed8b947)
 
      Replace `<your-username>` with your IoT testbed username.
 
