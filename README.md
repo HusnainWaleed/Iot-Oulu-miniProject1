@@ -70,6 +70,9 @@ Follow the steps below to set up and run the IoT Mini Project 1 on the IoT testb
 
 2. **Add SSH Keys to IoT Testbed:**
    - Follow the instructions at [IoT-LAB SSH Access](https://www.iot-lab.info/docs/getting-started/ssh-access/) to add your SSH keys to the IoT testbed. This step ensures secure access to your IoT devices.
+  
+   - ![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/66acd017-084f-47cf-810d-a124fbdd41ad)
+add these keys to iot-testbed like below.
      ![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/6fddfe79-5c78-4eb1-abca-b45d9b0a76c8)
 
 Create a New Experiment:
@@ -139,6 +142,11 @@ Use the following command to build the border router firmware for the M3 node wi
 ```bash
 make ETHOS_BAUDRATE=500000 DEFAULT_CHANNEL=<channel> BOARD=iotlab-m3 -C examples/gnrc_border_router clean all
 ```
+![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/dfaa4295-c21c-452c-84c7-ede2787a712e)
+
+
+![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/b154ea34-e15d-4181-971c-d29e8bd7dfe5)
+
 
 Replace `<channel>` with the desired channel number.
 
@@ -149,6 +157,7 @@ Flash the border router firmware to the first M3 node (m3-1 board in this case) 
 ```bash
 iotlab-node --flash examples/gnrc_border_router/bin/iotlab-m3/gnrc_border_router.elf -l grenoble,m3,1
 ```
+![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/4fa8755c-5e5d-4de6-b302-a13bcb51b7f8)
 
 Ensure that the correct IoT-LAB site, node type (`m3`), and node ID are specified.
 
@@ -178,6 +187,8 @@ Replace `m3-1` with the appropriate node ID.
    ```bash
    cd ~/shared
    ```
+   ![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/8364e9d2-0dd8-4472-b769-772778c9658f)
+
 
 ### SSH into A8 Node
 
@@ -239,6 +250,7 @@ Follow these steps to deploy the IoT Mini Project 1, including building and flas
    ```bash
    iotlab-node --flash ./bin/iotlab-m3/SensorNode.elf -l grenoble,m3,<id>
    ```
+![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/f804c386-4eb7-4e46-8215-42a472936bcc)
 
    Ensure that the correct IoT-LAB site, node type (`m3`), and node ID are specified.
 
