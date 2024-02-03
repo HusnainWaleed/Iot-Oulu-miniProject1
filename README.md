@@ -1,7 +1,4 @@
 # Iot-Oulu-miniProject1
-It looks like you already have a good outline for your README file. Now, let's fill in some details and structure the content under each section:
-
-# IoT Project 1
 
 ## What's in this Repo
 
