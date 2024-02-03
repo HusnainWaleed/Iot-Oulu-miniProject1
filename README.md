@@ -157,7 +157,6 @@ Flash the border router firmware to the first M3 node (m3-1 board in this case) 
 ```bash
 iotlab-node --flash examples/gnrc_border_router/bin/iotlab-m3/gnrc_border_router.elf -l grenoble,m3,1
 ```
-![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/4fa8755c-5e5d-4de6-b302-a13bcb51b7f8)
 
 Ensure that the correct IoT-LAB site, node type (`m3`), and node ID are specified.
 
