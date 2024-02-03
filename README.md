@@ -195,6 +195,55 @@ Now, you have successfully set up and configured the border router firmware on t
 
 ### Deployment
 
+Follow these steps to deploy the IoT Mini Project 1, including building and flashing the sensor node firmware, connecting to the sensor node, and initiating communication.
+
+## Build and Flash Sensor Node Firmware
+
+1. **Build Sensor Node Firmware:**
+
+   From another terminal, log into the SSH front end of the grenoble site. Clone the sensor node directory containing the `Makefile` and `main.c`. Build the firmware for the sensor node using the A8 node's IPv6 address and tap-id:
+
+   ```bash
+   make DEFAULT_CHANNEL=15 SERVER_ADDR=<EC2 IPv6> EMCUTE_ID=station<tap-id> BOARD=iotlab-m3 -C . clean all
+   ```
+
+   Replace `<EC2 IPv6>` with the IPv6 address of your EC2 instance and `<tap-id>` with the tap-id of your sensor node.
+
+2. **Flash Sensor Node Firmware:**
+
+   Flash the sensor node firmware on an M3 node using the following command:
+
+   ```bash
+   iotlab-node --flash ./bin/iotlab-m3/SensorNode.elf -l grenoble,m3,<id>
+   ```
+
+   Ensure that the correct IoT-LAB site, node type (`m3`), and node ID are specified.
+
+## Connect to Sensor Node
+
+1. **Log into the M3 Node:**
+
+   Log into the M3 node using the `nc` command:
+
+   ```bash
+   nc m3-<id> 20000
+   ```
+
+   Replace `<id>` with the appropriate node ID.
+
+2. **Initiate Communication:**
+
+   Once connected to the M3 node, you can initiate communication with the sensor node. Monitor the terminal for incoming data or send commands as needed.
+
+   **Example:**
+
+   ```bash
+   Sending command to the sensor node...
+   ```
+
+   The exact commands and responses will depend on the specifics of your IoT Mini Project 1 implementation.
+
+These deployment steps are crucial for establishing communication between the sensor nodes and the deployed infrastructure. Customize the commands and configurations based on your project requirements and hardware configurations. Refer to the project documentation for additional details and troubleshooting guidelines.
 #### Setting Up EC2 Instance
 
 1. **Launch EC2 Instance:**
