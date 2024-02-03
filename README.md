@@ -70,6 +70,8 @@ Follow the steps below to set up and run the IoT Mini Project 1 on the IoT testb
 
 2. **Add SSH Keys to IoT Testbed:**
    - Follow the instructions at [IoT-LAB SSH Access](https://www.iot-lab.info/docs/getting-started/ssh-access/) to add your SSH keys to the IoT testbed. This step ensures secure access to your IoT devices.
+     ![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/6fddfe79-5c78-4eb1-abca-b45d9b0a76c8)
+
 
 3. **Open Visual Studio Code and Connect to IoT Testbed:**
    - Open Visual Studio Code on your local machine.
@@ -247,22 +249,66 @@ These deployment steps are crucial for establishing communication between the se
 #### Setting Up EC2 Instance
 
 1. **Launch EC2 Instance:**
-   - Log in to the AWS Management Console.
-   - Navigate to EC2 and launch a new instance.
+   -# Setting Up EC2 Instance
 
-2. **Security Groups**
-   - Configure security groups to control inbound and outbound traffic to your EC2 instance.
-   - Example inbound rule:
-     ```
-     Type: SSH
-     Protocol: TCP
-     Port Range: 22
-     Source: Your IP Address
-     ```
+Follow these steps to create and configure an EC2 instance on AWS with the necessary networking resources, security groups, and key pairs for your IoT Mini Project 1:
 
-3. **Access Control List (ACL)**
-   - Set up ACL rules if needed for additional network-level access control.
+## 1. Create a New Subnet and VPC:
 
-### Security Considerations
+- Go to the AWS Management Console.
+- Navigate to the VPC Dashboard.
+- Create a new VPC and a subnet within that VPC.
+- Ensure to add IPv6 CIDRs to both the subnet and VPC configurations.
 
-Provide guidelines on securing your IoT project, such as using secure credentials, encryption, or any other best practices.
+## 2. Enable Public Routes on Internet Gateway:
+
+- Create an Internet Gateway and attach it to your VPC.
+- In the route table for both IPv4 and IPv6, add routes to the Internet Gateway.
+
+## 3. Create a New Security Group:
+
+- Go to the Security Groups section in the EC2 Dashboard.
+- Create a new security group, and configure the following:
+  - **Inbound Rules:**
+    - Allow incoming traffic on port 1883 (MQTT).
+    - Allow ICMP for both IPv4 and IPv6 for necessary connectivity.
+  - **Outbound Rules:**
+    - Allow outgoing traffic as needed for your project.
+
+## 4. Create a New EC2 Instance:
+
+- Launch a new EC2 instance and choose the VPC, subnet, and security group created in the previous steps.
+- Assign an IPv6 address to the instance during the launch process.
+
+## 5. Generate Key Pair:
+
+- While launching the EC2 instance, create a new key pair.
+- Download the private key file (.pem) securely.
+
+## 6. Configure Security Group, ACL, and Subnet:
+
+### Security Groups:
+
+![Security Groups](path/to/security_groups_snapshot.png)
+
+Ensure that the security group allows incoming traffic on port 1883 and ICMP for both IPv4 and IPv6 as needed.
+
+### Access Control Lists (ACL):
+
+![Access Control Lists](path/to/acl_snapshot.png)
+
+Configure the ACL to allow the necessary inbound and outbound traffic.
+
+### Inbound Rules:
+
+![Inbound Rules](path/to/inbound_rules_snapshot.png)
+
+Define the inbound rules to permit the required traffic.
+
+### Outbound Rules:
+
+![Outbound Rules](path/to/outbound_rules_snapshot.png)
+
+Define the outbound rules to allow necessary traffic from the EC2 instance.
+
+These configurations will provide a secure and properly networked environment for your IoT Mini Project 1. Adjust the settings based on your project's specific requirements and security considerations. Always follow AWS best practices for security and networking.
