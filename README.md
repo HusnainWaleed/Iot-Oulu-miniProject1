@@ -2,7 +2,7 @@
 
 ## What's in this Repo
 
-Briefly describe the contents of the repository. Highlight key folders or files that users may need to pay attention to.
+In this repository, I have pushed all required files to emulate my mini project. This readme file will describe all of the steps needed to bring the project in the running state. You can also contribute to my project by opening a pull request as my project is in its starting phases.
 
 ## Project in a Nutshell
 
