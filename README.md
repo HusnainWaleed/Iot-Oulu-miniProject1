@@ -279,6 +279,7 @@ Follow these steps to create and configure an EC2 instance on AWS with the neces
 
 - Launch a new EC2 instance and choose the VPC, subnet, and security group created in the previous steps.
 - Assign an IPv6 address to the instance during the launch process.
+![Screenshot 2024-02-02 180712](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/c4df3464-7622-434f-a944-b83abbf45dfd)
 
 ## 5. Generate Key Pair:
 
@@ -289,25 +290,31 @@ Follow these steps to create and configure an EC2 instance on AWS with the neces
 
 ### Security Groups:
 
-![Security Groups](path/to/security_groups_snapshot.png)
+![Security Groups]
+![Screenshot 2024-02-02 181237](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/964fe2a3-0a53-4310-a0d8-241dac20c228)
+
 
 Ensure that the security group allows incoming traffic on port 1883 and ICMP for both IPv4 and IPv6 as needed.
 
 ### Access Control Lists (ACL):
 
-![Access Control Lists](path/to/acl_snapshot.png)
+![Access Control Lists]![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/e6189444-b94d-400b-ade7-66125e93996b)
+
 
 Configure the ACL to allow the necessary inbound and outbound traffic.
 
 ### Inbound Rules:
 
-![Inbound Rules](path/to/inbound_rules_snapshot.png)
+![Inbound Rules]
+![Screenshot 2024-02-02 181252](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/6b71cd19-2796-4338-8658-aade260b2f56)
 
 Define the inbound rules to permit the required traffic.
 
 ### Outbound Rules:
 
-![Outbound Rules](path/to/outbound_rules_snapshot.png)
+![Outbound Rules]
+![Screenshot 2024-02-02 181410](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/2d7642b2-c240-416e-a6df-b20754242133)
+
 
 Define the outbound rules to allow necessary traffic from the EC2 instance.
 
