@@ -63,16 +63,43 @@ By fulfilling these requirements, you lay the foundation for a successful implem
 
 ### Steps to Get Project Running
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/iot-project-1.git
-   cd iot-project-1
-   ```
+Follow the steps below to set up and run the IoT Mini Project 1 on the IoT testbed:
 
-2. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
+1. **Create IoT Testbed Account:**
+   - Go to [IoT-LAB Testbed](https://www.iot-lab.info/testbed) and create an account if you don't have one already.
+
+2. **Add SSH Keys to IoT Testbed:**
+   - Follow the instructions at [IoT-LAB SSH Access](https://www.iot-lab.info/docs/getting-started/ssh-access/) to add your SSH keys to the IoT testbed. This step ensures secure access to your IoT devices.
+
+3. **Open Visual Studio Code and Connect to IoT Testbed:**
+   - Open Visual Studio Code on your local machine.
+   - Connect to the IoT testbed using SSH. In the terminal, use the following command:
+     ```bash
+     ssh <your-username>@grenoble.iot-lab.info
+     ```
+![Screenshot 2024-02-03 214818](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/09e668e0-924d-41c5-9490-cd0e6d2ae140)
+
+     Replace `<your-username>` with your IoT testbed username.
+
+   - You should now have access to the IoT testbed via the terminal in Visual Studio Code.
+
+4. **Clone the Repository to IoT Testbed:**
+   - Clone your IoT Mini Project 1 repository to the IoT testbed. Use the following command in the Visual Studio Code terminal:
+     ```bash
+     git clone https://github.com/your-username/iot-mini-project-1.git
+     ```
+     Replace `<your-username>` with your GitHub username.
+
+5. **Build RIOT OS:**
+   - Build the RIOT operating system on the IoT testbed using the following command:
+     ```bash
+     source /opt/riot.source
+     ```
+     This command sets up the RIOT OS environment. Ensure that RIOT OS is correctly configured and built on the IoT testbed.
+
+Now you have successfully set up your IoT Mini Project 1 on the IoT testbed. You are ready to proceed with the next steps, such as configuring the IoT sensors, border router, and AWS IoT integration. Refer to the project documentation for further instructions on configuring and deploying the IoT solution.
+
+**Note:** The screenshots for Visual Studio Code and the IoT-LAB web interface may vary based on your operating system and specific configurations. Always refer to the official documentation for the most accurate guidance.
 
 ### Using the Code
 
