@@ -72,6 +72,26 @@ Follow the steps below to set up and run the IoT Mini Project 1 on the IoT testb
    - Follow the instructions at [IoT-LAB SSH Access](https://www.iot-lab.info/docs/getting-started/ssh-access/) to add your SSH keys to the IoT testbed. This step ensures secure access to your IoT devices.
      ![image](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/6fddfe79-5c78-4eb1-abca-b45d9b0a76c8)
 
+Create a New Experiment:
+![Screenshot 2024-02-02 151315](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/b8b7616d-54d5-4ded-9276-81da7c609a2b)
+
+Navigate to the "Experiments" section on the IoT-LAB dashboard.
+Click on "New Experiment" to initiate the experiment creation process.
+
+Configure Experiment Parameters:
+Specify the experiment name, duration, and other relevant details.
+Choose the IoT-LAB site (e.g., grenoble) where you want to deploy your experiment.
+
+Select Nodes:
+Choose the nodes you want to include in your experiment. For the IoT Mini Project 1, you may need M3 nodes and A8 nodes.
+Define the roles of each node in your experiment (e.g., sensor nodes, border router, etc.).
+![Screenshot 2024-02-02 162202](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/3e8b3bc4-6de0-44e5-a651-27e01cff1f4c)
+
+Monitor Experiment Status:
+Monitor the status of your experiment in the IoT-LAB dashboard.
+Once the experiment is scheduled and running, you can view real-time data and logs.
+![Screenshot 2024-02-02 171941](https://github.com/HusnainWaleed/Iot-Oulu-miniProject1/assets/96866520/aad69de0-19b7-43a5-9662-d739d2c782f3)
+
 
 3. **Open Visual Studio Code and Connect to IoT Testbed:**
    - Open Visual Studio Code on your local machine.
